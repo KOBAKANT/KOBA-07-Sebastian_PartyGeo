@@ -19,6 +19,7 @@ int saturation = 0;
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
+  Serial.println("hello");
 
   FastLED.addLeds<NEOPIXEL, LED_PIN>(leds, NUM_LEDS);
   FastLED.show();
@@ -26,10 +27,10 @@ void setup() {
 
   randomSeed(analogRead(A0));
 
-  for (int i = 0; i < NUM_LEDS; i++) {
-    lightOn(i, 255);
-  }
-  delay(1000);
+//  for (int i = 0; i < NUM_LEDS; i++) {
+//    lightOn(i, 255);
+//  }
+//  delay(1000);
 }
 
 // the loop routine runs over and over again forever:
